@@ -14,7 +14,15 @@ return [
     */
 
     'dashboard' => 'Panel główny',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'register' => 'Rejestracja',
+    'login' => 'Logowanie',
+    'logout' => 'Wyloguj',
+    'close_window' => ' Zamknij okno',
+    'password' => 'Hasło',
+    'remember_me' => 'Pamiętaj mnie',
+    'forgot' => 'Zapomniałeś hasła',
+    'log_in' => 'Zaloguj',
+    'forgot_password_text' =>'Zapomniałeś hasło? Nie ma problemu. Po prostu podaj nam swój adres e-mail, a wyślemy Ci link do resetowania hasła, który pozwoli Ci ustalić nowe hasło.',
+    'reset_link' =>'Link do resetowania hasła e-mail',
 
 ];
