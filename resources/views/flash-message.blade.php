@@ -29,6 +29,8 @@
 @if ($errors->any())
 <div class="alert alert-danger">
     <button type="button" class="close" data-dismiss="alert">×</button>
-    Check the following errors :(
+    @foreach ($errors->all() as $error)
+        {{ $error }}<br>
+    @endforeach
 </div>
 @endif

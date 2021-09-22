@@ -8,7 +8,7 @@ class SchoolService {
 
     public function getAll()
     {
-        return view('dashboard',['schools' => School::All() ] );
+        return view('dashboard',['schools' => School::with('classes')->get() ] );
     }
 
 }
