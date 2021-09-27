@@ -26,7 +26,7 @@ class SwimmerRequest extends FormRequest
         return [
             'first_name' => 'required',
             'second_name' => 'required',
-            'school_class_id' => 'required',
+            'school_classes_id' => 'required',
         ];
     }
 }
