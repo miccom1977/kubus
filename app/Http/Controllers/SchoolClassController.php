@@ -49,7 +49,7 @@ class SchoolClassController extends Controller
     public function show($id)
     {
         $class =SchoolClass::find($id);
-        return view('showClass',['class' => $class ] );
+        return view('showClass', compact('class') );
 
     }
 
