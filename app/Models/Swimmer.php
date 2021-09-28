@@ -24,4 +24,14 @@ class Swimmer extends Model
         return $this->belongsTo('App\Models\SchoolClass');
     }
 
+    public function school(){
+        return $this->hasOneThrough(
+            'App\Models\School',
+            'App\Models\SchoolClass',
+            'id',
+            'id',
+            'school_class_id',
+            'school_id'
+        );
+    }
 }

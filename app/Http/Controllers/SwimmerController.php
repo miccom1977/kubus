@@ -15,8 +15,8 @@ class SwimmerController extends Controller
      */
     public function index()
     {
-        $swimmers =swimmer::with('schoolClass')->get();
-        //dd($swimmers);
+        $swimmers =Swimmer::with('schoolClass')->with('school')->get();
+       // dd($swimmers);
         return view('swimmersList',compact('swimmers'));
     }
 
