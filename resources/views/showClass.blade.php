@@ -11,7 +11,7 @@
                     Uczniowie klasy  {{ $class->description }}<br>
                     <table>
                         @foreach ( $class->swimmer as $singleSwimmer)
-                            <tr><td>{{ $singleSwimmer->first_name }}</td><td>{{ $singleSwimmer->second_name }}</td><td>edytuj</td><td>usuń</td></tr>
+                            <tr><td>{{ $singleSwimmer->first_name }}</td><td>{{ $singleSwimmer->second_name }}</td><td><a href="../swimmer/{{ $singleSwimmer->id }}/edit">edytuj</a></td><td>usuń</td></tr>
                         @endforeach
                     </table>
                     <form method="post" action="{{ route('swimmer.store') }}">

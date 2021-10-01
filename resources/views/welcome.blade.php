@@ -25,7 +25,7 @@
         }
             @font-face {
                 font-family: vipnagorgialla;
-                src: url("http://www.miccom.pl/assets/fonts/vipnagorgialla.ttf");
+                src: url( {{ asset('/fonts/vipnagorgialla.ttf')}} );
             }
             *{ font-family: DejaVu Sans; font-size: 14px;}
             .footer { position: fixed; left: 0px; bottom: 0px; right: 0px; height: 30px; text-align:center; }
@@ -33,7 +33,7 @@
             .page-break {
                 page-break-after: always;
                 height:130px;
-                background: url(http://www.miccom.pl/assets/images/footerCup.jpg)  0 15px no-repeat;
+                background: url( {{ asset('/images/footerCup.jpg')}} )  0 15px no-repeat;
                 width:625px;
                 margin-top:50px;
                 bottom:0px;
@@ -80,7 +80,12 @@
             @endif
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                VIII Zawody Pływackie Klas Trzecich 2022!
+                <img src="{{ asset('/images/footerCup.jpg') }}" style="padding-left: 15%;"/>
+						<div class="header">
+							IX Zawody Pływackie Klas Trzecich Waterrr Cup 2022
+						</div>
+					</div>
+
 
             </div>
         </div>

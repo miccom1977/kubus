@@ -17,6 +17,9 @@ class CreateSwimmersTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('second_name');
+            $table->integer('status')->default(0);
+            $table->integer('parrent_accept')->default(0);
+            $table->integer('sex')->default(0);
             $table->timestamps();
         });
     }

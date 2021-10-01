@@ -11,7 +11,7 @@
                     Lista uniczów<br>
                     <table>
                         @foreach ( $swimmers as $singleSwimmer)
-                            <tr><td>{{ $singleSwimmer->first_name }}</td><td>{{ $singleSwimmer->second_name }}</td><td>{{ $singleSwimmer->school->description }}</td><td>{{ $singleSwimmer->schoolClass->description }}</td><td>edytuj</td><td>usuń</td></tr>
+                            <tr><td>{{ $singleSwimmer->first_name }}</td><td>{{ $singleSwimmer->second_name }}</td><td>{{ $singleSwimmer->school->description }}</td><td>{{ $singleSwimmer->schoolClass->description }}</td><td><a href="../swimmer/{{ $singleSwimmer->id }}/edit">edytuj</a></td><td>usuń</td></tr>
                         @endforeach
                     </table>
                 </div>
