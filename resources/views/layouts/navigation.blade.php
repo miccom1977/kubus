@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('swimmer')" :active="request()->routeIs('swimmer')">
                         {{ __('web.swimmer_list') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('competition')" :active="request()->routeIs('competition')">
+                        {{ __('web.competition') }}
+                    </x-nav-link>
                 </div>
             </div>
 

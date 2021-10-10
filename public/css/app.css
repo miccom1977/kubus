@@ -188583,3 +188583,33 @@ select {
 }
 
 
+body {
+    font-family: 'Lato';
+}
+
+.fa-btn {
+margin-right: 6px;
+}
+@font-face {
+    font-family: vipnagorgialla;
+    src: url('../fonts/vipnagorgialla.ttf');
+}
+.footer { position: fixed; left: 0px; bottom: 0px; right: 0px; height: 30px; text-align:center; }
+td{height:30px;padding:10px}
+.page-break {
+    page-break-after: always;
+    height:130px;
+    background: url('../images/footerCup.jpg')  0 15px no-repeat;
+    width:625px;
+    margin-top:50px;
+    bottom:0px;
+    position:absolute;
+}
+.header {
+    font-family: vipnagorgialla;
+    width:100%;
+    color:#feed00;
+    font-size:30px !important;
+    text-align:center;
+    text-shadow: 0px 0px 10px black;
+}

@@ -12,6 +12,27 @@
 
 namespace App\Models{
 /**
+ * App\Models\Competition
+ *
+ * @property int $id
+ * @property string $description
+ * @property string $sex
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition whereSex($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Competition whereUpdatedAt($value)
+ */
+	class Competition extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\School
  *
  * @property int $id
@@ -71,6 +92,8 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int $school_class_id
+ * @property int $sex
+ * @property int $status
  * @property-read \App\Models\School|null $school
  * @property-read \App\Models\SchoolClass $schoolClass
  * @method static \Illuminate\Database\Eloquent\Builder|Swimmer newModelQuery()
@@ -81,6 +104,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Swimmer whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Swimmer whereSchoolClassId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Swimmer whereSecondName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Swimmer whereSex($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Swimmer whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Swimmer whereUpdatedAt($value)
  */
 	class Swimmer extends \Eloquent {}

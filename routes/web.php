@@ -4,6 +4,7 @@ use App\Services\SchoolService;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\SwimmerController;
+use App\Http\Controllers\CompetitionController;
 use App\Http\Controllers\SchoolClassController;
 
 /*
@@ -23,6 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/school', SchoolController::class)->name('index','school');
     Route::resource('/schoolClass', SchoolClassController::class)->name('index','schoolClass');
     Route::resource('/swimmer', SwimmerController::class)->name('index','swimmer');
+    Route::resource('/competition', CompetitionController::class)->name('index','competition');
     /*
 
     Route::resource('/orderPosition', OrderPositionController::class)->name('index','orderPosition');

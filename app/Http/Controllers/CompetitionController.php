@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Swimmer;
+use App\Models\Competition;
 use Illuminate\Http\Request;
-use App\Http\Requests\SwimmerRequest;
+use App\Http\Requests\RequestCompetition;
 
-class SwimmerController extends Controller
+class CompetitionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class SwimmerController extends Controller
      */
     public function index()
     {
-        $swimmers =Swimmer::with('schoolClass')->with('school')->get();
-       // dd($swimmers);
-        return view('swimmersList',compact('swimmers'));
+        $competitions = Competition::all();
+        return view('addCompetition', compact('competitions'));
     }
 
     /**
@@ -33,22 +32,22 @@ class SwimmerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\SwimmerRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SwimmerRequest $request)
+    public function store(RequestCompetition $request)
     {
-        Swimmer::create($request->all());
-        return back()->with('success', 'Uczeń dodany.');
+        Competition::create($request->all());
+        return back()->with('success', 'Konkurencja dodana.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Competition $competition)
     {
         //
     }
@@ -56,35 +55,35 @@ class SwimmerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function edit(Swimmer $swimmer)
+    public function edit(Competition $competition)
     {
-        return view('editSwimmer',compact('swimmer'));
+        return view('editCompetition',compact('competition'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Swimmerequest  $request
-     * @param  int  $swimmer
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function update(SwimmerRequest $request, Swimmer $swimmer)
+    public function update(RequestCompetition $request, Competition $competition)
     {
         //dd($swimmer);
-        $swimmer->update($request->all());
+        $competition->update($request->all());
         return back()->with('success', 'Zmiany zapisane.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Competition $competition)
     {
         //
     }

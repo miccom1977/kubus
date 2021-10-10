@@ -23,8 +23,12 @@
                                     <input type="text" name="first_name" id="first_name"><br>
                                     <label>Nazwisko</label>
                                     <input type="text" name="second_name" id="second_name"><br>
+                                    <label>Płeć</label><br>
+                                    <input type="radio" name="sex" id="sex" value="1">Chłopiec<br>
+                                    <input type="radio" name="sex" id="sex" value="2">Dziewczynka<br>
                                     <input type="hidden" name="school_class_id" id="school_class_id" value="{{ $class->id }}"><br>
-                                    <input type="submit" name="send" value="Dodaj szkołę" class="btn btn-dark btn-block">
+                                    <input type="hidden" name="status" id="status" value="0"><br>
+                                    <input type="submit" name="send" value="Dodaj ucznia" class="btn btn-dark btn-block">
                                 </td>
                             </tr>
                         </table>

@@ -18,6 +18,8 @@ class Swimmer extends Model
         'first_name',
         'second_name',
         'school_class_id',
+        'sex',
+        'status'
     ];
 
     public function schoolClass(){

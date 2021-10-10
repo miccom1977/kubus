@@ -62,6 +62,7 @@
                             </td>
                             <td>
                                 {{ $swimmer->school->description }} / {{ $swimmer->schoolClass->description }}
+                                <input type="hidden" name="school_class_id" value="{{ $swimmer->schoolClass->id }}"><br>
                             </td>
                             <td>
                                 <input type="submit" name="send" value="Zapisz zmiany" class="btn btn-dark btn-block"><br>
